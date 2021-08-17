@@ -1,0 +1,21 @@
+<!DOCTYPE htl>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      console.log('hi')
+      const keyPress = {}
+      function keyDown(evt) {
+        if (!keyPress[evt.keyCode]){
+          keyPress[evt.keyCode] = 1
+        } else {
+          keyPress[evt.keyCode] += 1
+        }
+        console.log('fired', evt.keyCode, keyPress[evt.keyCode])
+      }
+      window.addEventListener('keydown', keyDown);
+    </script>
+  </body>
+</html>
